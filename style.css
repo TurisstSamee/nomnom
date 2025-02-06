@@ -1,0 +1,202 @@
+/* 🎀 RESET CSS */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* 🌸 Nền Gradient động với màu xanh nước biển, tím và hồng */
+body {
+    background: linear-gradient(135deg, #81D3F9, #A6A9B6, #FFB6C1); /* Xanh, xám và hồng */
+    background-size: 400% 400%; /* Làm cho gradient có khả năng di chuyển */
+    animation: gradientAnimation 15s ease infinite;
+    color: #333;
+    text-align: center;
+    transition: all 0.3s ease;
+    overflow-x: hidden;
+}
+
+/* 🌟 Ngôi sao lấp lánh */
+.stars, .hearts {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.stars span, .hearts span {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: white;
+    opacity: 0.7;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    animation: sparkle 5s infinite alternate;
+}
+
+.hearts span {
+    font-size: 20px;
+    color: #FF66B2;
+    text-shadow: 0px 0px 10px rgba(255, 64, 129, 0.8);
+    animation: heart-floating 4s infinite alternate;
+}
+
+/* Hiệu ứng ngôi sao lấp lánh */
+@keyframes sparkle {
+    0% { opacity: 0; transform: scale(0.5) translateY(0); }
+    100% { opacity: 1; transform: scale(1) translateY(-10px); }
+}
+
+/* Trái tim bay lên */
+@keyframes heart-floating {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(-30px) rotate(20deg); }
+}
+
+/* 🎯 HEADER */
+nav {
+    background: rgba(255, 255, 255, 0.4);
+    padding: 20px;
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.3);
+    margin: 10px auto;
+    width: 90%;
+    z-index: 1;
+    position: relative;
+}
+
+/* Logo */
+.logo h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo span {
+    color: #FF66B2; /* Màu hồng nhẹ */
+}
+
+/* 🎯 Form chọn thông tin */
+#form-section {
+    width: 70%;
+    margin: 50px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    z-index: 1;
+    position: relative;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Chỉnh sửa font cho các labels */
+label {
+    display: block;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #555;
+    font-weight: 500;
+}
+
+/* 🔥 Input và Select */
+input, select {
+    width: 80%;
+    padding: 12px;
+    margin: 10px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+    font-size: 1rem;
+    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+input:focus, select:focus {
+    box-shadow: 0px 0px 15px rgba(255, 105, 180, 0.8); /* Màu sắc của focus */
+}
+
+/* 🚀 Nút bấm */
+button {
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #FF66B2, #FF4081);
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s;
+    margin-top: 20px;
+    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.3);
+}
+
+button:hover {
+    background: white;
+    color: #FF66B2;
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(255, 64, 129, 0.6);
+}
+
+/* 📜 Kết quả */
+#result-section {
+    margin: 50px auto;
+    width: 60%;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.3);
+    z-index: 1;
+    position: relative;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(50px); /* Đưa kết quả xuống dưới */
+    transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
+}
+
+/* Sau khi kết quả được mở ra */
+#result-section.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Kết quả sẽ trượt lên từ dưới */
+}
+
+/* Cải thiện hiển thị kết quả */
+#result-section p {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    color: #333;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 🌀 ANIMATION */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+    #form-section, #result-section {
+        width: 90%;
+    }
+
+    input, select {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+        font-size: 1.1rem;
+    }
+}
