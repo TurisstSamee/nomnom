@@ -312,3 +312,17 @@ button:hover {
     color: white;
 }
 
+/* 🔥 Kết quả ẩn ban đầu */
+#result-section {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(30px);
+    transition: all 0.5s ease-in-out;
+}
+
+/* 🏆 Khi có kết quả, hiển thị đẹp */
+#result-section.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
