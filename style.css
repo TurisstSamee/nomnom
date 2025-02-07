@@ -17,7 +17,7 @@
 
 /* 🌄 Thay nền thành hình ảnh */
 body {
-    background: url("https://i.pinimg.com/originals/3g/X8/bN/3gX8bNjLz.jpg") no-repeat center center fixed;
+    background: url("main.png") no-repeat center center fixed;
     background-size: cover;
     color: #333;
     text-align: center;
