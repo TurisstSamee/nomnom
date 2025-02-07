@@ -8,10 +8,10 @@
 }
 
 /* 🌸 Nền Gradient động với màu xanh nước biển, tím và hồng */
+
 body {
-    background: linear-gradient(135deg, #81D3F9, #A6A9B6, #FFB6C1); /* Xanh, xám và hồng */
-    background-size: 400% 400%; /* Làm cho gradient có khả năng di chuyển */
-    animation: gradientAnimation 15s ease infinite;
+    background: url("https://i.pinimg.com/originals/3g/X8/bN/3gX8bNjLz.jpg") no-repeat center center fixed;
+    background-size: cover;
     color: #333;
     text-align: center;
     transition: all 0.3s ease;
@@ -202,15 +202,6 @@ button:hover {
 }
 
 /* 🌄 Nền ảnh */
-body {
-    background: url("https://i.pinimg.com/originals/3g/X8/bN/3gX8bNjLz.jpg") no-repeat center center fixed;
-    background-size: cover;
-    color: #333;
-    text-align: center;
-    transition: all 0.3s ease;
-    overflow-x: hidden;
-}
-
 /* ☁️ Hiệu ứng đám mây bay */
 .clouds {
     position: fixed;
