@@ -200,6 +200,17 @@ button:hover {
         font-size: 1.1rem;
     }
 }
+
+/* 🌄 Nền ảnh */
+body {
+    background: url("https://i.pinimg.com/originals/3g/X8/bN/3gX8bNjLz.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    text-align: center;
+    transition: all 0.3s ease;
+    overflow-x: hidden;
+}
+
 /* ☁️ Hiệu ứng đám mây bay */
 .clouds {
     position: fixed;
@@ -262,9 +273,10 @@ button:hover {
 
 .social-icons a:hover {
     background: #FF66B2;
-    transform: scale(1.1);
+    transform: scale(1.2) rotate(10deg);
 }
 
 .social-icons a:hover i {
     color: white;
 }
+
