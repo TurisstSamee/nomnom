@@ -1,4 +1,30 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Tạo nhiều đám mây bay ngẫu nhiên
+    function createClouds() {
+        const cloudContainer = document.querySelector(".clouds");
+        
+        for (let i = 0; i < 5; i++) {
+            let cloud = document.createElement("span");
+            cloud.classList.add("cloud");
+
+            // Vị trí ngẫu nhiên cho mỗi đám mây
+            let randomTop = Math.random() * 40 + 10; // Giữ trong khoảng từ 10% đến 50%
+            let randomSize = Math.random() * 100 + 100; // Kích thước 100px - 200px
+            let randomDuration = Math.random() * 10 + 15; // Thời gian bay từ 15s - 25s
+
+            cloud.style.top = `${randomTop}%`;
+            cloud.style.width = `${randomSize}px`;
+            cloud.style.height = `${randomSize / 2}px`;
+            cloud.style.animationDuration = `${randomDuration}s`;
+            
+            cloudContainer.appendChild(cloud);
+        }
+    }
+
+    createClouds(); // Chạy khi trang load
+});
+
+document.addEventListener("DOMContentLoaded", function () {
     // Lắng nghe sự kiện khi người dùng nhấn "Tạo Đề Xuất"
     document.getElementById("generateBtn").addEventListener("click", function () {
         // Lấy giá trị từ các trường nhập thông tin
